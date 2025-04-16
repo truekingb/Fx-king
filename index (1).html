@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TKING’s Ultimate Forex Scalping Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: linear-gradient(to right, #1f1c2c, #928dab);
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0,0,0,0.6);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input, select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 6px;
+        }
+        button {
+            background: #f39c12;
+            color: black;
+            padding: 0.75rem;
+            border: none;
+            width: 100%;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+        .links a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TKING’s Ultimate Forex Scalping Book</h1>
+        <div class="section">
+            <p>After sending payment, fill in the form below to receive your copy by email.</p>
+        </div>
+        <form id="paymentForm">
+            <div class="section">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+                
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="">Select</option>
+                    <option value="Binance">Binance</option>
+                    <option value="BEP20">BEP20</option>
+                    <option value="TRC20">TRC20</option>
+                    <option value="APTOS">APTOS</option>
+                </select>
+            </div>
+            <button type="submit">Send Confirmation</button>
+        </form>
+        <div class="section">
+            <h3>Payment Details</h3>
+            <ul>
+                <li><strong>Binance:</strong> <a href="https://s.binance.com/y9FwAf6k" target="_blank">Click to Pay</a></li>
+                <li><strong>BEP20:</strong> 0xc273d209f900c4ad0a4e88d49f1561fdaea5d34d</li>
+                <li><strong>TRC20:</strong> TKxbgcPSJZcuTB139bNQd9xVSkJcQdDZ6c</li>
+                <li><strong>APTOS:</strong> 0xfe5b39a677bcc6cc770123c56218c34b97a0b9230855d98f375d54dac8142430</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h3>Support</h3>
+            <p>WhatsApp: <a href="https://wa.me/qr/BNVYAEZINDLAC" target="_blank">Contact Support</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/tking_beast?igsh=dmpqdmR5dzlkbTN1" target="_blank">@tking_beast</a></p>
+        </div>
+        <div class="footer">
+            You’ll receive a Google Drive link and the password <strong>Tking123@</strong> after confirmation.
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("lDyv2ZgELVIKtEHmc");
+        })();
+
+        document.getElementById("paymentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            emailjs.sendForm("service_d2nf8jz", "template_nu3w8at", this)
+                .then(() => {
+                    alert("Confirmation sent! Please check your email shortly.");
+                }, (error) => {
+                    alert("Failed to send. Please try again.");
+                    console.error(error);
+                });
+        });
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</body>
+</html>
